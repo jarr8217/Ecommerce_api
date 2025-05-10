@@ -8,5 +8,6 @@ class CustomerSchema(ma.SQLAlchemyAutoSchema):
         load_instance = True
         include_relationships = True
 
-    # Prevent circular recursion when serializing
-    #orders = fields.Nested("OrderSchema", many=True, exclude=["customer"], dump_only=True)
+        # Prevent circular recursion when serializing
+        orders = fields.Nested("OrderSchema", many=True, exclude=["customer"], dump_only=True)
+        

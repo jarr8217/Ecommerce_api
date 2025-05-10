@@ -2,8 +2,6 @@ from flask import Flask
 from config import Config
 from extensions import db, ma
 from routes import register_routes
-
-# Explicit model imports (no wildcard)
 from models.customer import Customer
 from models.order import Order
 
