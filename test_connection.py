@@ -1,3 +1,10 @@
+"""
+This script tests the database connection for the e-commerce API.
+
+It initializes the Flask application, configures the database, and attempts to connect to the database engine.
+If the connection is successful, a success message is printed; otherwise, an error message is displayed.
+"""
+
 from flask import Flask
 from config import Config
 from extensions import db

@@ -1,3 +1,9 @@
+"""
+This module defines the Customer model for the e-commerce application.
+
+The Customer model includes attributes such as name, email, and address, and it establishes a one-to-many relationship with orders.
+"""
+
 from extensions import db
 
 

@@ -1,9 +1,13 @@
-from extensions import ma, db
+from extensions import db
 from models.product import Product
 from marshmallow_sqlalchemy import SQLAlchemyAutoSchema
-from marshmallow import fields
+from marshmallow import fields, validate
 
 class ProductSchema(SQLAlchemyAutoSchema):
+    name = fields.String(required=True, validate=validate.Length(min=1))
+    price = fields.Float(required=True, validate=validate.Range(min=0))
+    description = fields.String(allow_none=True)
+
     class Meta:
         model = Product
         load_instance = False

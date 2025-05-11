@@ -1,3 +1,9 @@
+"""
+This module initializes and runs the Flask application for the e-commerce API.
+
+The application is configured with database and serialization extensions, and it registers routes for handling API requests.
+"""
+
 from flask import Flask
 from config import Config
 from extensions import db, ma
@@ -6,6 +12,12 @@ from models.customer import Customer
 from models.order import Order
 
 def create_app():
+    """
+    Factory function to create and configure the Flask application.
+
+    Returns:
+        Flask: The configured Flask application instance.
+    """
     app = Flask(__name__)
     app.config.from_object(Config)
 
@@ -22,5 +34,8 @@ def create_app():
     return app
 
 if __name__ == '__main__':
+    """
+    Entry point for running the Flask application.
+    """
     app = create_app()
     app.run(debug=True)
