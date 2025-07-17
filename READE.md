@@ -83,7 +83,7 @@ pip install -r requirements.txt
 ### 4. Set up database URI in `config.py`
 ```python
 # config.py
-SQLALCHEMY_DATABASE_URI = 'mysql+mysqlconnector://root:root1234!@localhost/ecommerce_api'
+SQLALCHEMY_DATABASE_URI = 'mysql+mysqlconnector://root:<password>@localhost/ecommerce_api'
 SQLALCHEMY_TRACK_MODIFICATIONS = False
 ```
 
